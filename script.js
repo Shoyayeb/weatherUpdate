@@ -13,6 +13,12 @@ const showCurrentWeather = weather => {
     const iconUrl = ` http://openweathermap.org/img/wn/${iconCode}@4x.png`
     const conditionImage = document.getElementById("currentWeatherImg")
     conditionImage.src = iconUrl;
+    // text
+    const conditionText = document.getElementById("conditionText");
+    const locationGot = weather.name;
+    const descriptionGot = weather.weather[0].description;
+    const tempGot = weather.main.temp;
+    conditionText.innerText = `Its ${descriptionGot} in ${locationGot} and the temparature is ${tempGot}°`
 
 }
 
