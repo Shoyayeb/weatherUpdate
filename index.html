@@ -11,57 +11,28 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <title>Hello, world!</title>
+    <title>Weather -To Know Current Weather Condition</title>
 </head>
 
 <body class="bg-light">
-
-
-
-    <div class="bg-dark bg-opacity-10 d-md-flex justify-content-md-evenly align-items-center">
+    <div
+        class="bg-dark bg-opacity-10 d-flex justify-content-lg-evenly flex-lg-row flex-column align-items-center gap-lg-0 gap-5">
         <div class="d-md-block d-flex justify-content-center">
             <a href="./index.html">
                 <img src="./logo.png" alt="logo" width="75">
             </a>
         </div>
-        <div class="w-50 mx-5 mx-md-0">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        <div class="d-flex flex-column flex-lg-row gap-2 gap-lg-0 mx-2">
+            <input class="form-control me-2" id="locationInput" type="search" placeholder="Search For Your Area"
+                aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" onclick="fetchCurrentWeather()">Search</button>
         </div>
     </div>
+    <div class="d-flex justify-content-center align-items-center">
 
+        <img src="./logo.png" width="500px" id="currentWeatherImg" alt="">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

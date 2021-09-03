@@ -8,5 +8,12 @@ function fetchCurrentWeather() {
         .then(weather => showCurrentWeather(weather))
 }
 const showCurrentWeather = weather => {
-    
+    console.log(weather);
+    const iconCode = weather.weather[0].icon;
+    const iconUrl = ` http://openweathermap.org/img/wn/${iconCode}@4x.png`
+    const conditionImage = document.getElementById("currentWeatherImg")
+    conditionImage.src = iconUrl;
+
 }
+
+// fetchCurrentWeather()
